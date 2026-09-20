@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>VIMAN — Imagine. Design. Create.</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="logo">
+      VIMAN
+    </div>
+
+    <div class="nav-links">
+      <a href="#home">Home</a>
+      <a href="#how-it-works">How It Works</a>
+      <a href="#editor">Design</a>
+      <a href="#features">Features</a>
+      <a href="#faq">FAQ</a>
+    </div>
+
+    <a href="#editor" class="nav-button">
+      Start Designing
+    </a>
+  </nav>
+
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+
+    <div class="hero-content">
+
+      <p class="eyebrow">
+        AI-POWERED ROOM VISUALIZATION
+      </p>
+
+      <h1>
+        Imagine your room.<br>
+        <span>See it differently.</span>
+      </h1>
+
+      <p class="hero-text">
+        Upload a photo of your room, select a wall and choose a colour.
+        VIMAN uses AI to visualize your new wall colour while keeping
+        the natural lighting and shadows of your room.
+      </p>
+
+      <a href="#editor" class="primary-button">
+        Start Creating
+      </a>
+
+    </div>
+
+    <div class="hero-decoration">
+      <div class="hero-circle"></div>
+      <div class="hero-card">
+        <span>AI</span>
+        <p>Wall Detection</p>
+      </div>
+    </div>
+
+  </section>
+
+
+  <!-- EDITOR -->
+  <section class="editor-section" id="editor">
+
+    <div class="section-heading">
+      <p class="eyebrow">VIMAN DESIGN STUDIO</p>
+
+      <h2>
+        Create your new space.
+      </h2>
+
+      <p>
+        Upload your room and let AI help you visualize the possibilities.
+      </p>
+    </div>
+
+
+    <div class="editor">
+
+      <!-- LEFT PANEL -->
+      <div class="upload-panel">
+
+        <div class="panel-label">
+          01 — UPLOAD
+        </div>
+
+        <h3>
+          Your room
+        </h3>
+
+        <p>
+          Upload a clear photo of the room you want to redesign.
+        </p>
+
+        <label class="upload-box" for="imageInput">
+
+          <div class="upload-icon">
+            +
+          </div>
+
+          <strong>
+            Upload room photo
+          </strong>
+
+          <span>
+            JPG, PNG or WEBP
+          </span>
+
+        </label>
+
+        <input
+          type="file"
+          id="imageInput"
+          accept="image/*"
+          hidden
+        >
+
+
+        <div class="status-box" id="statusBox">
+          <span class="status-dot"></span>
+          <span id="statusText">
+            Waiting for image
+          </span>
+        </div>
+
+      </div>
+
+
+      <!-- CENTER PANEL -->
+      <div class="preview-panel">
+
+        <div class="panel-label">
+          02 — PREVIEW
+        </div>
+
+        <div class="canvas-wrapper">
+
+          <canvas id="roomCanvas"></canvas>
+
+          <div class="canvas-message" id="canvasMessage">
+            Upload a room photo to begin
+          </div>
+
+        </div>
+
+        <div class="preview-help">
+          Click directly on the wall you want to paint.
+        </div>
+
+      </div>
+
+
+      <!-- RIGHT PANEL -->
+      <div class="color-panel">
+
+        <div class="panel-label">
+          03 — COLOUR
+        </div>
+
+        <h3>
+          Choose a shade
+        </h3>
+
+        <p>
+          Select the colour you want to visualize on your wall.
+        </p>
+
+
+        <div class="color-wheel" id="colorWheel">
+
+          <div class="wheel-inner">
+
+            <div
+              class="selected-color"
+              id="selectedColor"
+            ></div>
+
+          </div>
+
+        </div>
+
+
+        <div class="selected-info">
+
+          <span>
+            Selected shade
+          </span>
+
+          <strong id="colorName">
+            Red
+          </strong>
+
+        </div>
+
+
+        <button
+          class="ai-button"
+          id="paintButton"
+        >
+          <span>✦</span>
+          Paint Wall with AI
+        </button>
+
+
+        <div class="editor-actions">
+
+          <button
+            class="secondary-button"
+            id="resetButton"
+          >
+            Reset
+          </button>
+
+          <button
+            class="secondary-button"
+            id="downloadButton"
+          >
+            Download Design
+          </button>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- HOW IT WORKS -->
+  <section class="how-section" id="how-it-works">
+
+    <div class="section-heading">
+
+      <p class="eyebrow">
+        HOW IT WORKS
+      </p>
+
+      <h2>
+        From imagination<br>
+        to visualization.
+      </h2>
+
+    </div>
+
+
+    <div class="steps">
+
+      <div class="step">
+        <span>01</span>
+        <h3>Upload</h3>
+        <p>
+          Upload a normal photo of your room.
+        </p>
+      </div>
+
+      <div class="step">
+        <span>02</span>
+        <h3>Select</h3>
+        <p>
+          Click on the wall you want to change.
+        </p>
+      </div>
+
+      <div class="step">
+        <span>03</span>
+        <h3>Choose</h3>
+        <p>
+          Pick a colour from the VIMAN palette.
+        </p>
+      </div>
+
+      <div class="step">
+        <span>04</span>
+        <h3>Visualize</h3>
+        <p>
+          AI helps create your new room design.
+        </p>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- FEATURES -->
+  <section class="features-section" id="features">
+
+    <div class="section-heading">
+
+      <p class="eyebrow">
+        VIMAN FEATURES
+      </p>
+
+      <h2>
+        Designed to remove<br>
+        the guesswork.
+      </h2>
+
+    </div>
+
+
+    <div class="features-grid">
+
+      <div class="feature-card">
+        <div class="feature-number">01</div>
+        <h3>AI Wall Detection</h3>
+        <p>
+          VIMAN uses a pretrained AI segmentation model
+          to identify wall areas in your room photograph.
+        </p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-number">02</div>
+        <h3>Realistic Preview</h3>
+        <p>
+          The original lighting, shadows and visual texture
+          are preserved while changing the wall colour.
+        </p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-number">03</div>
+        <h3>Explore Colours</h3>
+        <p>
+          Experiment with different shades before deciding
+          how you want your room to look.
+        </p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-number">04</div>
+        <h3>No Guesswork</h3>
+        <p>
+          Visualize your idea before buying paint or
+          committing to a colour.
+        </p>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- MISSION -->
+  <section class="mission-section">
+
+    <p class="eyebrow">
+      OUR MISSION
+    </p>
+
+    <h2>
+      Turning imagination<br>
+      into reality.
+    </h2>
+
+    <p>
+      No guesswork. No wasted paint. No surprises.
+    </p>
+
+  </section>
+
+
+  <!-- FAQ -->
+  <section class="faq-section" id="faq">
+
+    <div class="section-heading">
+
+      <p class="eyebrow">
+        FAQ
+      </p>
+
+      <h2>
+        Questions, answered.
+      </h2>
+
+    </div>
+
+
+    <div class="faq-list">
+
+      <details>
+        <summary>
+          How does VIMAN detect the wall?
+        </summary>
+
+        <p>
+          VIMAN uses a pretrained AI image-segmentation model
+          that can identify objects and surfaces such as walls
+          in a room photograph.
+        </p>
+      </details>
+
+
+      <details>
+        <summary>
+          Can I undo my design?
+        </summary>
+
+        <p>
+          Yes. Use the Reset button to return to the
+          original uploaded image.
+        </p>
+      </details>
+
+
+      <details>
+        <summary>
+          Do I need a professional photograph?
+        </summary>
+
+        <p>
+          No. A normal phone photograph can be used.
+          A clear image with the wall visible gives the AI
+          more information to work with.
+        </p>
+      </details>
+
+
+      <details>
+        <summary>
+          Is VIMAN just an AI image generator?
+        </summary>
+
+        <p>
+          No. VIMAN is designed around identifying the
+          actual wall in your uploaded photograph and
+          changing that area rather than generating an
+          unrelated room.
+        </p>
+      </details>
+
+    </div>
+
+  </section>
+
+
+  <!-- FOOTER -->
+  <footer>
+
+    <div class="footer-logo">
+      VIMAN
+    </div>
+
+    <p>
+      IMAGINE • DESIGN • CREATE
+    </p>
+
+    <span>
+      © 2026 VIMAN
+    </span>
+
+  </footer>
+
+
+  <!-- IMPORTANT -->
+  <script type="module" src="script.js"></script>
+
+</body>
+</html>
